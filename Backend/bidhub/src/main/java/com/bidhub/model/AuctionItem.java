@@ -22,5 +22,7 @@ public class AuctionItem {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private boolean sold = false;
+    private boolean isPaid = false;
+
 }
 

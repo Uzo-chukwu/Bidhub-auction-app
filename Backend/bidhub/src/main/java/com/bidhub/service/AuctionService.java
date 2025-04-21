@@ -8,5 +8,7 @@ import java.util.List;
 public interface AuctionService {
     AuctionItem createItem(CreateAuctionItemRequest request);
     List<AuctionItem> getActiveAuctions();
+    void markItemAsPaid(String auctionItemId);
+
 }
 

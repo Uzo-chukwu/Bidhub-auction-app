@@ -30,5 +30,14 @@ public class AuctionServiceImpl implements AuctionService {
     public List<AuctionItem> getActiveAuctions() {
         return auctionRepo.findBySoldFalse();
     }
+
+    @Override
+    public void markItemAsPaid(String auctionItemId) {
+        AuctionItem item = auctionRepo.findById(auctionItemId)
+                .orElseThrow(() -> new RuntimeException("Item not found"));
+        item.setPaid(true);
+        auctionRepo.save(item);
+    }
+
 }
 

@@ -26,5 +26,12 @@ public class AuctionController {
     public ResponseEntity<List<AuctionItem>> getActive() {
         return ResponseEntity.ok(auctionService.getActiveAuctions());
     }
+
+    @PostMapping("/{auctionId}/mark-paid")
+    public ResponseEntity<Void> markAsPaid(@PathVariable String auctionId) {
+        auctionService.markItemAsPaid(auctionId);
+        return ResponseEntity.ok().build();
+    }
+
 }
 
