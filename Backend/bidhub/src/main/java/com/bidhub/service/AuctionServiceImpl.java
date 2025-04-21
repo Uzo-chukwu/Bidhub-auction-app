@@ -3,18 +3,16 @@ package com.bidhub.service;
 import com.bidhub.dto.CreateAuctionItemRequest;
 import com.bidhub.model.AuctionItem;
 import com.bidhub.repository.AuctionItemRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
+@RequiredArgsConstructor
 @Service
 public class AuctionServiceImpl implements AuctionService {
     private final AuctionItemRepository auctionRepo;
 
-    public AuctionServiceImpl(AuctionItemRepository auctionRepo) {
-        this.auctionRepo = auctionRepo;
-    }
 
     @Override
     public AuctionItem createItem(CreateAuctionItemRequest request) {
