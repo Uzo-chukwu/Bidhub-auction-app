@@ -14,6 +14,7 @@ public class User{
     private String id;
     private String username;
     private String email;
+    private UserRole role = UserRole.USER;
     private String password;
     private boolean active;
 

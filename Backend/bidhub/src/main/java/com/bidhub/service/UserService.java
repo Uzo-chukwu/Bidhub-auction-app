@@ -8,5 +8,7 @@ public interface UserService {
     User register(RegisterUserRequest request);
     User findByEmail(String email);
     User login(LoginRequest request);
+    void deleteUser(String userId);
+
 
 }

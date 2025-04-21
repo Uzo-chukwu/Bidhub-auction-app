@@ -47,4 +47,10 @@ public class BidServiceImpl implements BidService {
     public List<Bid> getBidsForAuction(String auctionItemId) {
         return bidRepo.findByAuctionItemId(auctionItemId);
     }
+
+    @Override
+    public List<Bid> getBidsByUser(String userId) {
+        return bidRepo.findByUserId(userId);
+    }
+
 }
