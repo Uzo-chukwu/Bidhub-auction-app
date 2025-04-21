@@ -1,10 +1,10 @@
 package com.bidhub.controller;
 
+import com.bidhub.dto.LoginRequest;
 import com.bidhub.dto.RegisterUserRequest;
 import com.bidhub.model.User;
 import com.bidhub.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,5 +21,11 @@ public class UserController {
         User registered = userService.register(request);
         return ResponseEntity.ok(registered);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> login(@RequestBody LoginRequest request) {
+        return ResponseEntity.ok(userService.login(request));
+    }
+
 
 }
