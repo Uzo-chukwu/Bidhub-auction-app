@@ -1,13 +1,13 @@
-package com.bidhub;
+package com.bidhub.bidhub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
-public class BidHubApplication {
+public class BidhubApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(BidHubApplication.class, args);
+        SpringApplication.run(BidhubApplication.class, args);
     }
+
 }

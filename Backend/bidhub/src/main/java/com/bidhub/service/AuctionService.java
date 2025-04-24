@@ -1,14 +1,13 @@
 package com.bidhub.service;
 
-import com.bidhub.dto.CreateAuctionItemRequest;
-import com.bidhub.model.AuctionItem;
+import com.bidhub.dto.AuctionItemDTO;
 
 import java.util.List;
 
 public interface AuctionService {
-    AuctionItem createItem(CreateAuctionItemRequest request);
-    List<AuctionItem> getActiveAuctions();
-    void markItemAsPaid(String auctionItemId);
-
+    AuctionItemDTO addItem(AuctionItemDTO itemDTO);
+    void removeItem(String id);
+    List<AuctionItemDTO> getActiveAuctions();
+    List<AuctionItemDTO> getWonAuctions(String userId);
+    void claimAuction(String auctionId, String userId);
 }
-

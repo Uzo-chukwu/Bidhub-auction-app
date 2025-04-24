@@ -1,14 +1,12 @@
 package com.bidhub.service;
 
-import com.bidhub.dto.PlaceBidRequest;
-import com.bidhub.model.Bid;
+import com.bidhub.dto.BidDTO;
+import com.bidhub.dto.BidRequestDTO;
 
 import java.util.List;
 
 public interface BidService {
-    Bid placeBid(PlaceBidRequest request);
-    List<Bid> getBidsForAuction(String auctionItemId);
-    List<Bid> getBidsByUser(String userId);
-
+    BidDTO placeBid(BidRequestDTO bidRequestDTO, String userId);
+    List<BidDTO> getUserBids(String userId);
+    List<BidDTO> getBidsForItem(String auctionItemId);
 }
-

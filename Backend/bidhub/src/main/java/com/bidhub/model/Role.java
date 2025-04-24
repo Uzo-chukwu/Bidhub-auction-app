@@ -1,5 +1,5 @@
 package com.bidhub.model;
 
-public enum UserRole {
+public enum Role {
     USER, ADMIN
 }
