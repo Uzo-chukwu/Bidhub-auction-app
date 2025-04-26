@@ -13,4 +13,5 @@ public class UserProfile {
     private Gender gender;
     private String phoneNumber;
     private Address address;
+
 }
